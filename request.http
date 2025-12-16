@@ -1,0 +1,86 @@
+POST http://127.0.0.1:5555/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "anwar",
+    "lastName" : "tarek",
+    "age": 24
+}
+
+
+###
+GET http://127.0.0.1:5555/ HTTP/1.1
+
+
+###
+PATCH  http://127.0.0.1:5555/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "kareem5"
+}
+
+###
+DELETE http://127.0.0.1:5555/2 HTTP/1.1
+
+
+###
+POST http://127.0.0.1:5555/post HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "post5",
+    "data": {
+        "key1": "value5" 
+    },
+    "active": true,
+    "user_id": 5
+}
+
+###
+GET http://127.0.0.1:5555/post HTTP/1.1
+
+
+
+###
+POST http://127.0.0.1:5555/post/many HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "title": "post3",
+        "active": true,
+        "user_id": 3,
+        "data": {
+            "key": "value3"
+        }
+    },{
+        "title": "post4",
+        "active": true,
+        "user_id": 4,
+        "data": {
+            "key": "value4"
+        }
+    },{
+        "title": "post5",
+        "active": true,
+        "user_id": 5,
+        "data": {
+            "key": "value5"
+        }
+    },{
+        "title": "post",
+        "active": true,
+        "user_id": 3,
+        "data": {
+            "key": "value"
+        }
+    },{
+        "title": "post",
+        "active": true,
+        "user_id": 3,
+        "data": {
+            "key": "value"
+        }
+    }
+]
